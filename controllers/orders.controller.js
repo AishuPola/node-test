@@ -5,7 +5,7 @@ import { getProductById } from "../services/cart.service.js";
 async function placeOrderCtr(req, res) {
   const data = req.body;
   const userId = data.userId;
-  const cartData = await getCartByUserId(userId);
+  const cartData = await getProductById(userId);
 
   if (
     !cartData.data ||
